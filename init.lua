@@ -77,7 +77,7 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-
+  'akinsho/toggleterm.nvim',
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -315,6 +315,9 @@ require('telescope').setup {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
+        file_ignore_pattern = {
+          "node_modules"
+        }
       },
     },
   },
